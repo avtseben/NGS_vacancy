@@ -39,13 +39,15 @@ import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponseForList;
             public void onResponse(Call<VacancyResponseForList> call, Response<VacancyResponseForList> response) {
                 if (response.body() != null) {
                     VacancyResponseForList vacancyResponse = response.body();
+/*                    String searchType = vacancyResponse.getMetadata().getQuery().getSearchType();
+                    System.out.println(searchType);*/
                     for(VacancyMini vacancy : vacancyResponse.getVacancies()){
                         System.out.println("-------------------");
+                        System.out.println("Id: " + vacancy.getId());
                         System.out.println("Header: " + vacancy.getHeader());
-                        System.out.println("Company: " + vacancy.getCompany().getTitle());
                         System.out.println("MinSalary: " + vacancy.getSalaryMin());
                         System.out.println("MaxSalary: " + vacancy.getSalaryMax());
-//                        System.out.println("TestTrancient: " + vacancy.getDescription());
+                        System.out.println("Company: " + vacancy.getCompany().getTitle());
                         System.out.println(" ");
                     }
                 }

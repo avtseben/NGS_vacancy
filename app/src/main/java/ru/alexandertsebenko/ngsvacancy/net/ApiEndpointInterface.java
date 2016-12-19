@@ -16,6 +16,6 @@ import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponseForList;
  */
 public interface ApiEndpointInterface {
 
-    @GET("vacancies/121956933")
+    @GET("vacancies")
     Call<VacancyResponseForList> getVacancies();
 }
