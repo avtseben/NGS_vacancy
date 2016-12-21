@@ -10,7 +10,7 @@ public class VacancyMini {
 
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private Long id;
     @SerializedName("header")
     @Expose
     private String header;
@@ -33,11 +33,11 @@ public class VacancyMini {
 
     public VacancyMini(){}
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -67,6 +67,14 @@ public class VacancyMini {
     }
     public CompanyMini getCompany() {
         return company;
+    }
+
+    @Override
+    public String toString() {
+        return (  "Header: " + getHeader()
+//                + " Company: " + getCompany().getTitle()
+                + " MinSalary: " + getSalaryMin()
+                + " MaxSalary: " + getSalaryMax());
     }
 
     public void setCompany(CompanyMini company) {

@@ -11,21 +11,24 @@ import java.util.List;
 
 import ru.alexandertsebenko.ngsvacancy.R;
 import ru.alexandertsebenko.ngsvacancy.datamodel.Vacancy;
+import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyMini;
+import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponseForList;
 
 public class VacancyListAdapter extends RecyclerView.Adapter<VacancyListAdapter.ListViewHolder> {
+
 
     public interface OnClickListener {
         void onItemClick(View itemView, int position);
     }
 
     private OnClickListener listener;
-    private List<Vacancy> vacancyList;
+    private List<VacancyMini> vacancyList;
 
     public void setOnItemClickListener(OnClickListener listener) {
         this.listener = listener;
     }
 
-    public VacancyListAdapter(List<Vacancy> vacancies) {
+    public VacancyListAdapter(List<VacancyMini> vacancies) {
         vacancyList = vacancies;
     }
 
@@ -50,7 +53,7 @@ public class VacancyListAdapter extends RecyclerView.Adapter<VacancyListAdapter.
         return vacancyList.size();
     }
 
-    public Vacancy getListItem(int position) {
+    public VacancyMini getListItem(int position) {
         return vacancyList.get(position);
     }
 
@@ -80,5 +83,8 @@ public class VacancyListAdapter extends RecyclerView.Adapter<VacancyListAdapter.
                 }
             });
         }
+    }
+    public void addData(VacancyMini vacancy) {
+        vacancyList.add(vacancy);
     }
 }

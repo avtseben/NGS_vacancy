@@ -32,15 +32,15 @@ import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponseForList;
 
         ApiEndpointInterface apiService = retrofit.create(ApiEndpointInterface.class);
 
-    public void getVacancies() {
+/*    public void getVacancies() {
         Call<VacancyResponseForList> call = apiService.getVacancies();
         call.enqueue(new Callback<VacancyResponseForList>() {
             @Override
             public void onResponse(Call<VacancyResponseForList> call, Response<VacancyResponseForList> response) {
                 if (response.body() != null) {
                     VacancyResponseForList vacancyResponse = response.body();
-/*                    String searchType = vacancyResponse.getMetadata().getQuery().getSearchType();
-                    System.out.println(searchType);*/
+*//*                    String searchType = vacancyResponse.getMetadata().getQuery().getSearchType();
+                    System.out.println(searchType);*//*
                     for(VacancyMini vacancy : vacancyResponse.getVacancies()){
                         System.out.println("-------------------");
                         System.out.println("Id: " + vacancy.getId());
@@ -60,7 +60,7 @@ import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponseForList;
             }
 
         });
-    }
+    }*/
     private void catchListFromCloud(Vacancy vacancy) {
         Toast.makeText(MyApplication.getAppContext(), "Client gets vacancy list: " + vacancy, Toast.LENGTH_SHORT).show();
     }
