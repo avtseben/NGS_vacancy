@@ -1,0 +1,153 @@
+
+j  com.android.dx.cf.direct.ClassPathOpener.processArchive(Ljava/io/File;)Z+198
+j  com.android.dx.cf.direct.ClassPathOpener.processOne(Ljava/io/File;Z)Z+48
+j  com.android.dx.cf.direct.ClassPathOpener.process()Z+15
+j  com.android.dx.command.dexer.Main.processOne(Ljava/lang/String;Lcom/android/dx/cf/direct/ClassPathOpener$FileNameFilter;)V+20
+j  com.android.dx.command.dexer.Main.processAllFiles()Z+272
+j  com.android.dx.command.dexer.Main.runMonoDex()I+58
+j  com.android.dx.command.dexer.Main.run(Lcom/android/dx/command/dexer/Main$Arguments;)I+76
+j  com.android.dx.command.dexer.Main.main([Ljava/lang/String;)V+14
+j  com.android.dx.command.Main.main([Ljava/lang/String;)V+61
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000056d8a800 JavaThread "Service Thread" daemon [_thread_blocked, id=8020, stack(0x0000000057a20000,0x0000000057b20000)]
+  0x0000000056d88000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=8076, stack(0x0000000057770000,0x0000000057870000)]
+  0x0000000056d87000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=7396, stack(0x0000000057440000,0x0000000057540000)]
+  0x0000000056d84800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8100, stack(0x00000000575c0000,0x00000000576c0000)]
+  0x0000000056d81800 JavaThread "Attach Listener" daemon [_thread_blocked, id=7216, stack(0x00000000571a0000,0x00000000572a0000)]
+  0x00000000545f1000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2688, stack(0x00000000572d0000,0x00000000573d0000)]
+  0x0000000054592000 JavaThread "Finalizer" daemon [_thread_blocked, id=8180, stack(0x0000000056c80000,0x0000000056d80000)]
+  0x0000000054590800 JavaThread "Reference Handler" daemon [_thread_blocked, id=7340, stack(0x0000000056b00000,0x0000000056c00000)]
+=>0x000000000026e800 JavaThread "main" [_thread_in_vm, id=4796, stack(0x0000000002150000,0x0000000002250000)]
+
+Other Threads:
+  0x000000005458b000 VMThread [stack: 0x0000000056900000,0x0000000056a00000] [id=3752]
+  0x0000000056e17800 WatcherThread [stack: 0x0000000057b40000,0x0000000057c40000] [id=3592]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000026c500] SystemDictionary_lock - owner thread: 0x000000000026e800
+
+Heap:
+ PSYoungGen      total 18432K, used 2229K [0x00000000eab00000, 0x00000000ebf80000, 0x0000000100000000)
+  eden space 15872K, 14% used [0x00000000eab00000,0x00000000ead2d5b8,0x00000000eba80000)
+  from space 2560K, 0% used [0x00000000ebd00000,0x00000000ebd00000,0x00000000ebf80000)
+  to   space 2560K, 0% used [0x00000000eba80000,0x00000000eba80000,0x00000000ebd00000)
+ ParOldGen       total 42496K, used 0K [0x00000000c0000000, 0x00000000c2980000, 0x00000000eab00000)
+  object space 42496K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c2980000)
+ Metaspace       used 3389K, capacity 4720K, committed 4864K, reserved 1056768K
+  class space    used 375K, capacity 424K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00000000118e0000,0x0000000011af0000] byte_map_base: 0x00000000112e0000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000557a0600
+ Begin Bits: [0x0000000012200000, 0x0000000013200000)
+ End Bits:   [0x0000000013200000, 0x0000000014200000)
+
+Polling page: 0x0000000000230000
+
+CodeCache: size=245760Kb used=1233Kb max_used=1233Kb free=244526Kb
+ bounds [0x0000000002520000, 0x0000000002790000, 0x0000000011520000]
+ total_blobs=332 nmethods=83 adapters=162
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.504 Thread 0x0000000056d88000   78       3       java.io.DataInputStream::readUnsignedShort (39 bytes)
+Event: 1.504 Thread 0x0000000056d88000 nmethod 78 0x0000000002652250 code [0x00000000026523e0, 0x0000000002652788]
+Event: 1.504 Thread 0x0000000056d88000   77       3       java.io.DataInputStream::readUTF (5 bytes)
+Event: 1.504 Thread 0x0000000056d88000 nmethod 77 0x00000000026528d0 code [0x0000000002652a40, 0x0000000002652bc8]
+Event: 1.504 Thread 0x0000000056d88000   81       3       java.io.BufferedInputStream::read1 (108 bytes)
+Event: 1.505 Thread 0x0000000056d88000 nmethod 81 0x0000000002652c50 code [0x0000000002652e60, 0x0000000002653778]
+Event: 1.506 Thread 0x0000000056d88000   82       3       java.io.DataInputStream::readShort (40 bytes)
+Event: 1.507 Thread 0x0000000056d88000 nmethod 82 0x0000000002653c10 code [0x0000000002653da0, 0x0000000002654148]
+Event: 1.507 Thread 0x0000000056d88000   83       3       java.io.DataInputStream::readFully (9 bytes)
+Event: 1.507 Thread 0x0000000056d88000 nmethod 83 0x0000000002654290 code [0x0000000002654400, 0x0000000002654608]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (3 events):
+Event: 0.890 Thread 0x000000000026e800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000eab130d8) thrown at [D:\re\puppet\workspace\8-2-build-windows-amd64-cygwin\jdk8u73\6086\hot!kÜ,Æ{ì?
+Event: 0.890 Thread 0x000000000026e800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000eab133c0) thrown at [D:\re\puppet\workspace\8-2-build-windows-amd64-cygwin\jdk8u73\6086\hotspot\src\share\vm\ÈÁzŒ‡ù?
+Event: 1.596 Thread 0x000000000026e800 Exception <a 'java/lang/NoClassDefFoundError': sun/util/calendar/ZoneInfoFile$ZoneOffsetTransitionRule> (0x00000000eace1150) thrown at [D:\re\puppet\workspace\8-2-build-windows-amd64-cygwin\jdk8u73\6086\hotspot\src\share\vm\classfile\systemDictionary.cpp, 
+
+Events (10 events):
+Event: 1.494 loading class sun/util/calendar/ZoneInfoFile
+Event: 1.494 loading class sun/util/calendar/ZoneInfoFile done
+Event: 1.494 loading class sun/util/calendar/ZoneInfoFile$1
+Event: 1.494 loading class sun/util/calendar/ZoneInfoFile$1 done
+Event: 1.496 loading class java/io/DataInputStream
+Event: 1.496 loading class java/io/DataInput
+Event: 1.496 loading class java/io/DataInput done
+Event: 1.496 loading class java/io/DataInputStream done
+Event: 1.595 loading class sun/util/calendar/ZoneInfoFile$ZoneOffsetTransitionRule
+Event: 1.596 loading class sun/util/calendar/ZoneInfoFile$ZoneOffsetTransitionRule done
+
+
+Dynamic libraries:
+0x000000013fd20000 - 0x000000013fd57000 	C:\Program Files\Java\jdk1.8.0_73\bin\java.exe
+0x0000000077540000 - 0x00000000776ea000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077420000 - 0x000000007753f000 	C:\Windows\system32\kernel32.dll
+0x000007fefd330000 - 0x000007fefd39a000 	C:\Windows\system32\KERNELBASE.dll
+0x0000000074f70000 - 0x0000000074ff7000 	C:\Windows\System32\SYSFER.DLL
+0x000007fefd630000 - 0x000007fefd70b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefeb80000 - 0x000007fefec1f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff620000 - 0x000007feff63f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefe6d0000 - 0x000007fefe7fd000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077320000 - 0x000000007741a000 	C:\Windows\system32\USER32.dll
+0x000007fefec70000 - 0x000007fefecd7000 	C:\Windows\system32\GDI32.dll
+0x000007fefe880000 - 0x000007fefe88e000 	C:\Windows\system32\LPK.dll
+0x000007feff550000 - 0x000007feff61a000 	C:\Windows\system32\USP10.dll
+0x000007fefc1d0000 - 0x000007fefc3c4000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.18837_none_fa3b1e3d17594757\COMCTL32.dll
+0x000007fefd820000 - 0x000007fefd891000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fefd7f0000 - 0x000007fefd81e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefeec0000 - 0x000007fefefc9000 	C:\Windows\system32\MSCTF.dll
+0x0000000054990000 - 0x0000000054a62000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\msvcr100.dll
+0x0000000054f90000 - 0x0000000055820000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\server\jvm.dll
+0x000007feec600000 - 0x000007feec609000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefec20000 - 0x000007fefec6d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefeb70000 - 0x000007fefeb78000 	C:\Windows\system32\NSI.dll
+0x000007fefbed0000 - 0x000007fefbf0b000 	C:\Windows\system32\WINMM.dll
+0x000007fefc5b0000 - 0x000007fefc5bc000 	C:\Windows\system32\VERSION.dll
+0x0000000077700000 - 0x0000000077707000 	C:\Windows\system32\PSAPI.DLL
+0x0000000054f80000 - 0x0000000054f8f000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\verify.dll
+0x0000000054f50000 - 0x0000000054f79000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\java.dll
+0x0000000054f30000 - 0x0000000054f46000 	C:\Program Files\Java\jdk1.8.0_73\jre\bin\zip.dll
+0x000007fefd8a0000 - 0x000007fefe62a000 	C:\Windows\system32\SHELL32.dll
+0x000007feff640000 - 0x000007feff843000 	C:\Windows\system32\ole32.dll
+0x000007fefd280000 - 0x000007fefd28f000 	C:\Windows\system32\profapi.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=windows-1251 -Duser.country=RU -Duser.language=ru -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --output C:\asp\NGS_vacancy\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_4233fd9291c52339d5f500c4955ca054364c26b5.jar C:\asp\NGS_vacancy\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar
+java_class_path (initial): C:\Users\avtseben\AppData\Local\Android\Sdk\build-tools\23.0.3\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Program Files\Broadcom\Broadcom 802.11;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files\WIDCOMM\Bluetooth Software\;c:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Hewlett-Packard\HP ProtectTools Security Manager\Bin\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\OpenVPN\bin;C:\androidSDK\platform-tools\;C:\Program Files\Broadcom\Broadcom 802.11;c:\Program Files (x86)\Intel\iCLS Client\;c:\Program Files\Intel\iCLS Client\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;c:\Program Files\WIDCOMM\Bluetooth Software\;c:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Hewlett-Packard\HP ProtectTools Security Manager\Bin\;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\Skype\Phone\;C:\Program Files (x86)\ufs2tools-0.8\ufs2tools\;C:\Program Files\Git\bin\;C:\androidSDK\platform-tools;C:\gradle\bin
+USERNAME=avtseben
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 58 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.23572)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+Memory: 4k page, physical 4056748k(70592k free), swap 5123076k(5072k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.73-b02) for windows-amd64 JRE (1.8.0_73-b02), built on Jan 29 2016 17:38:49 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Thu Dec 22 23:46:19 2016
+elapsed time: 1 seconds (0d 0h 0m 1s)
+

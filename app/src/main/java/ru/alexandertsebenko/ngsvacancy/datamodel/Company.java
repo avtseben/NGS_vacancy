@@ -2,6 +2,7 @@
 package ru.alexandertsebenko.ngsvacancy.datamodel;
 
 import java.util.List;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -34,14 +35,8 @@ public class Company {
     @SerializedName("validate_state")
     @Expose
     private Integer validateState;
-    @SerializedName("employees")
-    @Expose
-    private Employees employees;
-    @SerializedName("reviews")
-    @Expose
-    private Reviews reviews;
 
-    public Company(String title){
+    public Company(String title) {
         this.title = title;
     }
 
@@ -115,22 +110,6 @@ public class Company {
 
     public void setValidateState(Integer validateState) {
         this.validateState = validateState;
-    }
-
-    public Employees getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Employees employees) {
-        this.employees = employees;
-    }
-
-    public Reviews getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(Reviews reviews) {
-        this.reviews = reviews;
     }
 
 }

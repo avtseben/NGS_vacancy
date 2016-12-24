@@ -39,6 +39,7 @@ public class VacancyDetailFragment extends Fragment {
     TextView companyAdress;
     TextView vacancyDescription;
     TextView candidRequirements;
+    TextView contacts;
     private static final String VACANCY_ID = "vacancyId";
 
     @Nullable
@@ -51,6 +52,7 @@ public class VacancyDetailFragment extends Fragment {
         companyAdress = (TextView) view.findViewById(R.id.company_address);
         vacancyDescription = (TextView) view.findViewById(R.id.what_todo_description);
         candidRequirements = (TextView) view.findViewById(R.id.candid_requirements);
+        contacts = (TextView) view.findViewById(R.id.contact_info);
         return view;
     }
 
@@ -69,6 +71,9 @@ public class VacancyDetailFragment extends Fragment {
         companyAdress.setText(vacancy.getContact().getAddress());
         vacancyDescription.setText(Html.fromHtml(vacancy.getDescription()));
         candidRequirements.setText(vacancy.getRequirements());
+        contacts.setText("Контакты: \n"
+                + " email:" + vacancy.getContact().getEmail() + "\n"
+                + " телефон: " + vacancy.getContact().getPhones().get(0).getNumber());
     }
 
     public static VacancyDetailFragment newInstance(Long vacancyId) {

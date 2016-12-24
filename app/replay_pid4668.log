@@ -1,0 +1,8 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 343 ciObject found
+instanceKlass java/util/DualPivotQuicksort
+instanceKlass java/util/ArrayList$1
+instanceKlass com/android/dx/dex/file/FieldAnnotationStruct
+instanceKlass com/android/dx/ssa/back/FirstFitLocalCombiningAllocator$Multiset
