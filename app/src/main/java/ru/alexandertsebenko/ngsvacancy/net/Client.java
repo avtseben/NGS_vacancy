@@ -1,21 +1,11 @@
 package ru.alexandertsebenko.ngsvacancy.net;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.widget.Toast;
 
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import ru.alexandertsebenko.ngsvacancy.MyApplication;
+import ru.alexandertsebenko.ngsvacancy.util.MyApplication;
 import ru.alexandertsebenko.ngsvacancy.datamodel.Vacancy;
-import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyMini;
-import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponse;
-import ru.alexandertsebenko.ngsvacancy.datamodel.VacancyResponseForList;
 
 /**
  * Created by avtseben on 18.12.2016.

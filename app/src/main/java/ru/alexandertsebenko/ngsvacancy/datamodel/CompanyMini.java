@@ -14,10 +14,10 @@ public class CompanyMini {
     @SerializedName("title")
     @Expose
     private String title;
-/*
     @SerializedName("logo")
     @Expose
     private Logo logo;
+/*
     @SerializedName("interviews")
     @Expose
     private List<Object> interviews = null;
@@ -66,7 +66,6 @@ public class CompanyMini {
         this.title = title;
     }
 
-/*
     public Logo getLogo() {
         return logo;
     }
@@ -75,6 +74,7 @@ public class CompanyMini {
         this.logo = logo;
     }
 
+/*
     public List<Object> getInterviews() {
         return interviews;
     }

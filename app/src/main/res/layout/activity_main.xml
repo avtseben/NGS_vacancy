@@ -4,5 +4,5 @@
     android:id="@+id/fl_vacancy_list_fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.activity.MainActivity">
 </FrameLayout>
